@@ -17,3 +17,6 @@ docker builder prune -f
 
 # Полная очистка системы
 docker system prune -a -f --volumes
+
+# Дополнительная очистка логов контейнеров
+docker logs --tail 0 -f $(docker ps -q)
